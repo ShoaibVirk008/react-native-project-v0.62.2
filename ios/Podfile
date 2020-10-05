@@ -44,8 +44,8 @@ def flipper_post_install(installer)
   end
 end
 
-target 'WavyRating' do
-  # Pods for WavyRating
+target 'Structure_62' do
+  # Pods for Structure_62
   pod 'FBLazyVector', :path => "../node_modules/react-native/Libraries/FBLazyVector"
   pod 'FBReactNativeSpec', :path => "../node_modules/react-native/Libraries/FBReactNativeSpec"
   pod 'RCTRequired', :path => "../node_modules/react-native/Libraries/RCTRequired"
@@ -77,7 +77,7 @@ target 'WavyRating' do
   pod 'glog', :podspec => '../node_modules/react-native/third-party-podspecs/glog.podspec'
   pod 'Folly', :podspec => '../node_modules/react-native/third-party-podspecs/Folly.podspec'
 
-  target 'WavyRatingTests' do
+  target 'Structure_62Tests' do
     inherit! :complete
     # Pods for testing
   end
@@ -94,10 +94,10 @@ target 'WavyRating' do
   end
 end
 
-target 'WavyRating-tvOS' do
-  # Pods for WavyRating-tvOS
+target 'Structure_62-tvOS' do
+  # Pods for Structure_62-tvOS
 
-  target 'WavyRating-tvOSTests' do
+  target 'Structure_62-tvOSTests' do
     inherit! :search_paths
     # Pods for testing
   end
