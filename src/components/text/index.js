@@ -130,50 +130,22 @@ export const InputTitle = props => {
     );
 }
 
-export const DrawerLable = props => {
+export const ButtonTextRegular = props => {
     return (
-       <Wrapper style={{width:width(60),backgroundColor:'transparent'}}>
-            <RowWrapperBasic style={[{ justifyContent: 'space-between', backgroundColor: 'transparent' }]}>
-            <Wrapper>
-                <Text
-                    style={[styles.drawerLableStyle, props.focused?styles.focusedDrawerLableStyle:null, props.style]}
-                >
-                    {props.children}
-                </Text>
-                <Spacer height={sizes.smallMargin} />
-                {
-                    props.focused ?
-                        <LineHorizontal
-                            style={{ backgroundColor: colors.appColor1, width: width(6),borderRadius:25 }}
-                            height={height(0.5)}
-                        />
-                        :
-                        null
-                }
-            </Wrapper>
-            {
-                props.focused ?
-                    <CustomIcon
-                        icon={appIcons.arrow_right}
-                        color={props.color}
-                        size={sizes.icons.xl}
-                    />
-                    :
-                    null
-            }
-        </RowWrapperBasic>
-       </Wrapper>
+        <Text
+            style={[styles.ButtonTextRegularStyle, props.style]}
+        >
+            {props.children}
+        </Text>
     );
 }
-
-export const TitleWithInfo = props => {
-    const { containerStyle, titleStyle, infoStyle, title, info, onPressInfo } = props
+export const ButtonTextMedium = props => {
     return (
-        <Wrapper>
-            <RegularText style={[appStyles.textPrimaryColor, appStyles.textBold, titleStyle]}>{title}</RegularText>
-            <Spacer height={sizes.TinyMargin} />
-            <RegularText onPress={onPressInfo} style={[infoStyle]}>{info}</RegularText>
-        </Wrapper>
+        <Text
+            style={[styles.ButtonTextMediumStyle, props.style]}
+        >
+            {props.children}
+        </Text>
     );
 }
 
@@ -220,17 +192,14 @@ const styles = StyleSheet.create({
         ...appStyles.textTiny,
         //color: colors.appColor1
     },
-    drawerLableStyle: {
-        ...appStyles.textRegular,
-        color: colors.appTextColor5
+    ButtonTextRegularStyle: {
+        ...appStyles.ButtonTextRegular,
+        //color: colors.appColor1
     },
-    focusedDrawerLableStyle: {
-        ...appStyles.h6,
-        ...appStyles.textWhite,
-        fontFamily:fontFamily.appTextBold,
-        
+    ButtonTextMediumStyle:{
+        ...appStyles.ButtonTextMedium,
+        //color: colors.appColor1
     },
-    
 
 });
 

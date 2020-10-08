@@ -214,4 +214,14 @@ export const appStyles= StyleSheet.create({
   textBold: {
     fontFamily: fontFamily.appTextMedium
   },
+  ButtonTextRegular: {
+    fontSize: fontSize.regular,
+     color: '#000000',
+     fontFamily: fontFamily.appTextMedium
+   },
+   ButtonTextMedium: {
+     fontSize: fontSize.medium,
+      color: '#000000',
+      fontFamily: fontFamily.appTextMedium
+    },
 })
