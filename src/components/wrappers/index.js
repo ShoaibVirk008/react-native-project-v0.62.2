@@ -53,9 +53,13 @@ export const MainWrapperMatrial = props => {
     );
 }
 export const Wrapper = props => {
-    const { children, style, animation, flex } = props
+    const { children, style, animation, flex, duration, iterationCount, direction } = props
     return (
-        <Animatable.View animation={animation} style={[{ flex: flex }, style]}>
+        <Animatable.View
+            iterationCount={iterationCount}
+            direction={direction}
+            animation={animation}
+            duration={duration} style={[{ flex: flex }, style]}>
             {children}
         </Animatable.View>
     );
