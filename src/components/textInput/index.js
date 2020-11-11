@@ -4,7 +4,6 @@ import { Icon } from 'react-native-elements';
 import { height, totalSize, width } from 'react-native-dimension';
 import { colors, appStyles } from '../../services';
 const TextInputColored = ({iconName, iconType, placeholder, onFocus, onBlur, onChangeText, secureTextEntry, value, containerStyle}) => {
-    const { iconName, iconType, placeholder, onFocus, onBlur, onChangeText, secureTextEntry, value, containerStyle } = props
     return (
         <View style={[appStyles.inputContainerColored, {
             borderRadius: 10,
