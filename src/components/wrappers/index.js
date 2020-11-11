@@ -5,32 +5,28 @@ import { height, totalSize, width } from 'react-native-dimension';
 import { colors, appStyles, sizes } from '../../services';
 import * as Animatable from 'react-native-animatable'
 
-export const MainWrapper = props => {
-    const { children, style, animation } = props
+export const MainWrapper = ({ children, style, animation }) => {
     return (
         <Animatable.View animation={animation} style={[appStyles.mainContainer, style]}>
             {children}
         </Animatable.View>
     );
 }
-export const MainWrapperPrimary = props => {
-    const { children, style, animation } = props
+export const MainWrapperPrimary = ({ children, style, animation }) => {
     return (
         <Animatable.View animation={animation} style={[styles.mainWrapperPrimary, style]}>
             {children}
         </Animatable.View>
     );
 }
-export const ImageBackgroundWrapper = props => {
-    const { children, style, source } = props
+export const ImageBackgroundWrapper = ({ children, style, source }) => {
     return (
         <ImageBackground source={source} style={[appStyles.bgContainer, style]}>
             {children}
         </ImageBackground>
     );
 }
-export const MaterialBackgroundWrapper = props => {
-    const { children, style, source } = props
+export const MaterialBackgroundWrapper = ({ children, style, source }) => {
     return (
         <ImageBackgroundWrapper source={source} >
             <MainWrapper style={[{ backgroundColor: colors.appColor1Transparent }, style]}>
@@ -41,8 +37,7 @@ export const MaterialBackgroundWrapper = props => {
 }
 
 
-export const MainWrapperMatrial = props => {
-    const { children, style, animation, primaryColor, secondryColor, flex } = props
+export const MainWrapperMatrial = ({ children, style, animation, primaryColor, secondryColor, flex }) => {
     const defaultWrapperRadius = sizes.wrapperRadius
     return (
         <Animatable.View animation={animation} style={[appStyles.mainContainer, { flex: flex ? flex : 1, backgroundColor: primaryColor ? primaryColor : colors.appColor1 }, style]}>
@@ -52,8 +47,7 @@ export const MainWrapperMatrial = props => {
         </Animatable.View>
     );
 }
-export const Wrapper = props => {
-    const { children, style, animation, flex, duration, iterationCount, direction } = props
+export const Wrapper = ({ children, style, animation, flex, duration, iterationCount, direction }) => {
     return (
         <Animatable.View
             iterationCount={iterationCount}
@@ -64,8 +58,7 @@ export const Wrapper = props => {
         </Animatable.View>
     );
 }
-export const ComponentWrapper = props => {
-    const { children, style, animation } = props
+export const ComponentWrapper = ({ children, style, animation }) => {
     return (
         <Animatable.View animation={animation} style={[appStyles.compContainer, styles.removerMarginVertical, style]}>
             {children}
@@ -73,48 +66,42 @@ export const ComponentWrapper = props => {
     );
 }
 
-export const RowWrapper = props => {
-    const { children, style, animation } = props
+export const RowWrapper = ({ children, style, animation }) => {
     return (
         <Animatable.View animation={animation} style={[appStyles.rowCompContainer, styles.removerMarginVertical, style]}>
             {children}
         </Animatable.View>
     );
 }
-export const RowWrapperBasic = props => {
-    const { children, style, animation } = props
+export const RowWrapperBasic = ({ children, style, animation }) => {
     return (
         <Animatable.View animation={animation} style={[appStyles.rowView, style]}>
             {children}
         </Animatable.View>
     );
 }
-export const CardWrapper = props => {
-    const { children, style, animation } = props
+export const CardWrapper = ({ children, style, animation }) => {
     return (
         <Animatable.View animation={animation} style={[appStyles.cardView, { borderRadius: sizes.cardRadius }, style]}>
             {children}
         </Animatable.View>
     );
 }
-export const AbsoluteWrapper = props => {
-    const { children, style, animation } = props
+export const AbsoluteWrapper = ({ children, style, animation }) => {
     return (
         <Animatable.View animation={animation} style={[{ position: 'absolute', }, style]}>
             {children}
         </Animatable.View>
     );
 }
-export const FooterWrapperPrimary = props => {
-    const { children, style, animation } = props
+export const FooterWrapperPrimary = ({ children, style, animation }) => {
     return (
         <Animatable.View animation={animation ? animation : 'fadeInUpBig'} style={[styles.footerWrapperPrimary, style]}>
             {children}
         </Animatable.View>
     );
 }
-export const HeaderWrapperPrimary = props => {
-    const { children, style, animation } = props
+export const HeaderWrapperPrimary = ({ children, style, animation }) => {
     return (
         <Animatable.View animation={animation ? animation : 'fadeInDown'} style={[styles.headerWrapperPrimary, style]}>
             {children}
@@ -125,7 +112,7 @@ export const HeaderWrapperPrimary = props => {
 const styles = StyleSheet.create({
     mainWrapperPrimary: {
         ...appStyles.mainContainer,
-        backgroundColor: colors.appBgColorPrimary
+        backgroundColor: colors.appBgColor4
     },
     removerMarginVertical: {
         marginVertical: null

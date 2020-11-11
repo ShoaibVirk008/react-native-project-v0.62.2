@@ -4,8 +4,7 @@ import { Icon } from 'react-native-elements';
 import { height, totalSize, width } from 'react-native-dimension';
 import { colors } from '../../services';
 
-export const Spacer = props => {
-    const { style,width ,height } = props
+export const Spacer = ({style,width ,height }) => {
     return (
         <View style={[{height:height,width:width},style]}/>
     );

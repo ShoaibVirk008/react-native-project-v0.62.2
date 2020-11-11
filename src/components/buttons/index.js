@@ -8,8 +8,7 @@ import { color } from 'react-native-reanimated';
 import { CustomIcon } from '../icons';
 import { Wrapper, RowWrapperBasic, RowWrapper, ComponentWrapper } from '../wrappers';
 
-export const ButtonColored = props => {
-    const { text,animation, onPress, buttonStyle, textStyle, iconName, iconType, iconSize, buttonColor, iconStyle, tintColor } = props
+export const ButtonColored = ({text,animation, onPress, buttonStyle, textStyle, iconName, iconType, iconSize, buttonColor, iconStyle, tintColor}) => {
     return (
        <TouchableOpacity  onPress={onPress}>
             <Wrapper animation={animation} style={[appStyles.buttonColord, { borderRadius: sizes.buttonRadius, height: height(7), backgroundColor: buttonColor ? buttonColor : colors.appColor1 }, appStyles.shadow, buttonStyle]}>
@@ -34,8 +33,7 @@ export const ButtonColored = props => {
     );
 }
 
-export const ButtonColoredSmall = props => {
-    const { text, onPress, buttonStyle, customIcon, direction, textStyle, iconName, iconType, iconSize, iconColor, iconStyle } = props
+export const ButtonColoredSmall = ({text, onPress, buttonStyle, customIcon, direction, textStyle, iconName, iconType, iconSize, iconColor, iconStyle}) => {
     return (
         <TouchableOpacity onPress={onPress} style={[{ borderRadius: 15, paddingHorizontal: width(5), paddingVertical: height(1), backgroundColor: colors.appColor1 }, buttonStyle]}>
             <View style={{ flexDirection: direction ? direction : 'row', alignItems: 'center' }}>
@@ -64,8 +62,7 @@ export const ButtonColoredSmall = props => {
     );
 }
 
-export const ButtonBordered = props => {
-    const { text, onPress, buttonStyle, textStyle, iconName, customIcon, iconType, iconSize, iconColor, iconStyle, tintColor } = props
+export const ButtonBordered = ({text, onPress, buttonStyle, textStyle, iconName, customIcon, iconType, iconSize, iconColor, iconStyle, tintColor}) => {
     return (
         <TouchableOpacity onPress={onPress} style={[appStyles.buttonBorderd, { borderRadius: sizes.buttonRadius, height: height(7), borderColor: tintColor ? tintColor : colors.appColor1 }, buttonStyle]}>
             <View style={{ flexDirection: 'row', alignItems: 'center' }}>
@@ -96,8 +93,7 @@ export const ButtonBordered = props => {
     );
 }
 
-export const ButtonBorderedSmall = props => {
-    const { text, onPress, buttonStyle, rowReverse, textStyle, iconName, iconType, iconSize, iconColor, iconStyle, tintColor } = props
+export const ButtonBorderedSmall = ({ text, onPress, buttonStyle, rowReverse, textStyle, iconName, iconType, iconSize, iconColor, iconStyle, tintColor}) => {
     return (
         <TouchableOpacity onPress={onPress} style={[{ borderRadius: 15, paddingHorizontal: width(5), paddingVertical: height(1), borderColor: tintColor ? tintColor : colors.appColor1, borderWidth: 1 }, buttonStyle]}>
             <View style={{ flexDirection: rowReverse ? 'row-reverse' : 'row', alignItems: 'center' }}>
@@ -119,8 +115,7 @@ export const ButtonBorderedSmall = props => {
     );
 }
 
-export const ButtonArrowColored = props => {
-    const { text, onPress,animation, buttonStyle, textStyle, iconName, iconType, iconSize, buttonColor, iconStyle, tintColor } = props
+export const ButtonArrowColored = ({text, onPress,animation, buttonStyle, textStyle, iconName, iconType, iconSize, buttonColor, iconStyle, tintColor}) => {
     return (
         <TouchableOpacity onPress={onPress}>
             <ComponentWrapper animation={animation}  style={[{ borderRadius: sizes.buttonRadius, backgroundColor: buttonColor ? buttonColor : colors.appColor1, paddingVertical: height(1.25) }, appStyles.shadow, buttonStyle]}>

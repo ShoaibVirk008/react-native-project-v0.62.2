@@ -7,8 +7,7 @@ import { ComponentWrapper, Wrapper } from '../wrappers';
 import { RegularText, TinyText } from '../text';
 import { Spacer } from '../spacers';
 
-export const ChatBubbule = props => {
-    const { containerStyle, myMessage, message, time, image } = props
+export const ChatBubbule = ({containerStyle, myMessage, message, time, image}) => {
     return (
         <ComponentWrapper
             animation={!myMessage ? 'fadeInLeft' : 'fadeInRight'}

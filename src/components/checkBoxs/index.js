@@ -5,8 +5,7 @@ import { height, totalSize, width } from 'react-native-dimension';
 import { colors, sizes, appStyles } from '../../services';
 import { IconWithText } from '../icons';
 
-export const CheckBoxPrimary = props => {
-    const { textStyle, containerStyle, text, checked, onPress } = props
+export const CheckBoxPrimary = ({textStyle, containerStyle, text, checked, onPress }) => {
     const checkedIconName = 'checkbox-marked'
     const uncheckedIconName = 'checkbox-blank-outline'
     const checkboxIconType = 'material-community'

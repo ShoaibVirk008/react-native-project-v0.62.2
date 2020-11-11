@@ -4,8 +4,7 @@ import { Icon } from 'react-native-elements';
 import { height, totalSize, width } from 'react-native-dimension';
 import { colors } from '../../services';
 
-export const LineHorizontal = props => {
-    const { style ,height } = props
+export const LineHorizontal = ({style ,height}) => {
     return (
         <View style={[{height:height?height:0.5,backgroundColor:colors.appTextColor5},style]}/>
     );

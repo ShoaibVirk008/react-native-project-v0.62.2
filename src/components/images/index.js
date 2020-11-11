@@ -8,8 +8,7 @@ import { Wrapper, AbsoluteWrapper } from '../wrappers';
 import { color } from 'react-native-reanimated';
 //import LinearGradient from 'react-native-linear-gradient';
 
-export const ImageRound = props => {
-    const { style, size, source } = props
+export const ImageRound = ({style, size, source}) => {
     const defaultSize = totalSize(5)
     return (
         <Image
@@ -19,8 +18,7 @@ export const ImageRound = props => {
     );
 }
 
-export const ImageSqareRound = props => {
-    const { style, size, source } = props
+export const ImageSqareRound = ({style, size, source }) => {
     const defaultSize = totalSize(5)
     return (
         <Image
@@ -30,8 +28,7 @@ export const ImageSqareRound = props => {
     );
 }
 
-export const ImageProfile = props => {
-    const { imageStyle, source, containerStyle,animation,onPress } = props
+export const ImageProfile = ({imageStyle, source, containerStyle,animation,onPress }) => {
     return (
        <TouchableOpacity activeOpacity={1} onPress={onPress}>
             <Wrapper animation={animation?animation:'zoomIn'} style={[styles.ImageProfileContainer,containerStyle]}>
@@ -43,8 +40,7 @@ export const ImageProfile = props => {
        </TouchableOpacity>
     );
 }
-export const ImageCollectionItem = props => {
-    const { imageStyle, source, containerStyle } = props
+export const ImageCollectionItem = ({imageStyle, source, containerStyle}) => {
     return (
         <Wrapper style={containerStyle}>
             <Image
@@ -54,8 +50,7 @@ export const ImageCollectionItem = props => {
         </Wrapper>
     );
 }
-export const ImageBackgroundTop = props => {
-    const { imageStyle, source, containerStyle } = props
+export const ImageBackgroundTop = ({imageStyle, source, containerStyle}) => {
     return (
         <AbsoluteWrapper style={[containerStyle]}>
         <Image

@@ -5,8 +5,7 @@ import { height, totalSize, width } from 'react-native-dimension';
 import { colors } from '../../services';
 import { CardWrapper } from '../wrappers';
 
-export const Card = props => {
-    const { style,width ,height } = props
+export const Card = ({style,width ,height }) => {
     return (
        <CardWrapper>
            

@@ -9,8 +9,7 @@ import { RowWrapperBasic } from '../wrappers';
 import { TinyTitle } from '../text';
 import { Spacer } from '../spacers';
 
-export const LogoMain = props => {
-  const { } = props
+export const LogoMain = ({}) => {
   return (
     null
   );
