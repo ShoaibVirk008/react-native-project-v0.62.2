@@ -13,5 +13,6 @@ export * from './chatBubbles'
 export * from './checkBoxs'
 export * from './scrollViews'
 export * from './loaders'
+export * from './modals'
 
 
