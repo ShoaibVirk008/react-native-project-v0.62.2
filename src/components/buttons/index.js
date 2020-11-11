@@ -26,7 +26,7 @@ export const ButtonColored = ({text,animation, onPress, buttonStyle, textStyle, 
                         :
                         null
                 }
-                <ButtonTextRegular style={[{ color: tintColor ? tintColor : colors.appTextColor6, }, textStyle]}>{text}</ButtonTextRegular>
+                <ButtonTextMedium style={[{ color: tintColor ? tintColor : colors.appTextColor6, }, textStyle]}>{text}</ButtonTextMedium>
             </View>
         </Wrapper>
        </TouchableOpacity>
@@ -87,7 +87,7 @@ export const ButtonBordered = ({text, onPress, buttonStyle, textStyle, iconName,
                             :
                             null
                 }
-                <ButtonTextRegular style={[{ color: tintColor ? tintColor : colors.appColor1, }, textStyle]}>{text}</ButtonTextRegular>
+                <ButtonTextMedium style={[{ color: tintColor ? tintColor : colors.appColor1, }, textStyle]}>{text}</ButtonTextMedium>
             </View>
         </TouchableOpacity>
     );

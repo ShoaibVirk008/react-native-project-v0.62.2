@@ -183,10 +183,37 @@ export const appStyles= StyleSheet.create({
     elevation: 5
   },
   shadow: {
-    shadowOffset: { width: 5, height: 0 },
-    shadowColor: 'gray',
-    shadowOpacity: 0.5,
-    elevation: 5
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 2,
+    },
+    shadowOpacity: 0.25,
+    shadowRadius: 3.84,
+    
+    elevation: 5,
+  },
+  shadowColored: {
+    shadowColor: colors.appColor1,
+    shadowOffset: {
+      width: 0,
+      height: 7,
+    },
+    shadowOpacity: 0.43,
+    shadowRadius: 9.51,
+    
+    elevation: 15,
+  },
+  shadowDark: {
+    shadowColor: "#000",
+    shadowOffset: {
+      width: 0,
+      height: 12,
+    },
+    shadowOpacity: 0.58,
+    shadowRadius: 16.00,
+    
+    elevation: 24,
   },
   textCenter: {
     textAlign: 'center'
